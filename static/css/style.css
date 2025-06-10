@@ -20,7 +20,7 @@ main {
 }
 
 section {
-    margin: 50px 0px; 
+    margin: 50px 0px;
 }
 
 header {
@@ -65,6 +65,7 @@ img{
 }
 
 .btn{
+    margin-top: 10px;
     border-radius: 7px;
     font-size: 18px;
     color: #f8f8f5;
@@ -102,6 +103,10 @@ footer {
     background-color: #F2E94B;
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
     text-align: center;
+}
+
+.conditions .btn{
+    margin: 10px;
 }
 
 .swiper-slide img{
@@ -182,6 +187,10 @@ h2{
     margin-bottom: 16px;
 }
 
+.catalogue .btn:first-child{
+    margin-top: 25px;
+}
+
 #price{
     cursor: default;
 }
@@ -233,7 +242,7 @@ h2{
     .category-href:last-child{
         margin-bottom: 20px;
     }
-    
+
     button, a{
         font-size: 12px;
     }
