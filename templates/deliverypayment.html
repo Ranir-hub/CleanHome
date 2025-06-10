@@ -1,0 +1,26 @@
+{%extends "base_layout.html" %}
+{% load static %}
+{%block title %}Delivery and payment{% endblock title %}
+{%block content %}
+<section class = "deliverypayment">
+    <div class = "container">
+        <div class ="row g-4">
+            <div class = "col-lg-6">
+                <div class = "catalogue_item">
+                    <h2>Доставка</h2>
+                    <p>Доставка 200р по району1</p>
+                    <p>Доставка 300р по району2</p>
+                    <p>Доставка 400р по району3</p>
+                </div>
+            </div>
+            <div class = "col-lg-6">
+                <div class = "catalogue_item">
+                    <h2>Оплата</h2>
+                    <p>Наличными</p>
+                    <p>Переводом</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

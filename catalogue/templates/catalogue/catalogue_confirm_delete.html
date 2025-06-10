@@ -1,0 +1,21 @@
+{% extends "base_layout.html" %}
+{% load static %}
+{% block title %}Confirm delete{% endblock title %}
+{% block content %}
+<div class = "container">
+    <section>
+        <div class ="row g-4 justify-content-center">
+            <div class = "col-md-8 col-lg-6">
+                <div class = "article-confirm-delete">
+                    <h1 class = "mb-3">Вы уверены?</h1>
+                    <form class = "form" method = "post">
+                        {% csrf_token %}
+                        <button type = "submit" class = "btn">Да</button>
+                        <a href="{% url 'homepage' %}" class="btn">Отмена</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}

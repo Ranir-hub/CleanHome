@@ -1,0 +1,42 @@
+{%extends "base_layout.html" %}
+{%block title %}Catalogue{% endblock title %}
+{%block content %}
+<section class="catalogue">
+        <div class = "container">
+            <h1>Каталог</h1>
+            <div class ="row g-4">
+                {% for element in categories %}
+                <div class ="category-href col-lg-2">
+                    <a href = "{% url 'catalogue:category_this' slug=element.slug %}">
+                        {{ element.title }}
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <div class ="row g-4">
+                {% for element in items %}
+                <div class ="col-lg-4">
+                    <div class="catalogue_item">
+                        <h2>
+                            <a href="{% url 'catalogue:item' slug=element.slug %}">
+                                {{ element.title }}
+                            </a>
+                        </h2>
+                        <img  src = "{{ element.img.url }}" alt = "">
+                        <p>
+                            <b>Стоимость: {{ element.price }}/день</b>
+                        </p>
+                        <p>
+                            {{ element.snippet }}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% if user.is_staff %}
+            <a class = "btn" href = "{% url 'catalogue:item_create' %}">Добавить</a>
+            <a class = "btn" href = "{% url 'catalogue:category' %}">Редактировать категории</a>
+            {% endif %}
+        </div>
+</section>
+{% endblock content %}

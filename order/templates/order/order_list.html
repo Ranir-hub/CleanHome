@@ -1,0 +1,40 @@
+{%extends "base_layout.html" %}
+{%block title %}Catalogue{% endblock title %}
+{%block content %}
+<section class="catalogue">
+    <h1>Заказы</h1>
+        <div class = "container">
+            <div class ="row g-4">
+                {% for element in orders %}
+                <div class ="col-lg-3">
+                    <div class="catalogue_item">
+                        <h2>
+                            <a href="{% url 'order:order_update' slug=element.slug %}">
+                                Заказ №{{ element.id }}
+                            </a>
+                        </h2>
+                        <p>
+                            Оборудование: {{ element.id_Item.title }}
+                        </p>
+                        <p>
+                            Итоговая стоимость: {{ element.price }}
+                        </p>
+                        <time>
+                            От: {{ element.start }}
+                        </time>
+                        <br>
+                        <time>
+                            До: {{ element.end }}
+                        </time>
+                        {% if user.is_staff %}
+                        <p>
+                            {{ element.id_Customer }}
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+</section>
+{% endblock content %}

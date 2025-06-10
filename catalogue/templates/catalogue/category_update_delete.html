@@ -1,0 +1,23 @@
+{%extends "base_layout.html" %}
+{% load static %}
+{% block title %}update or delete{% endblock title %}
+{% block content %}
+<section class = "catalogue_form">
+    <h1>Обновить или удалить</h1>
+    <div class = "container">
+            <div class ="row g-4 justify-content-center">
+                <div class = "col-md-8 col-lg-6">
+                    <form class = "form" method = "post" enctype = "multipart/form-data">
+                        {% csrf_token %}
+                        {{ form }}
+                        <button type = "submit" class="btn">Сохранить</button>
+                        <a class = "btn"
+                            href = "{% url 'catalogue:category_delete' slug=category.slug %}">
+                            Удалить
+                        </a>
+                    </form>
+                </div>
+            </div>
+    </div>
+</section>
+{% endblock content %}

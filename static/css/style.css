@@ -1,0 +1,292 @@
+html {
+    height: 100%;
+}
+
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0px;
+    padding: 0;
+    background-color: #f8f8f5;
+    line-height: 1.6;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    flex: 1;
+}
+
+section {
+    margin: 50px 0px; 
+}
+
+header {
+    border-radius: 0px 0px 20px 20px;
+    background-color: #F2E94B;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button, a{
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    background-color: inherit;
+}
+
+button:hover, a:hover{
+    color: #A09BE7;
+}
+
+h1{
+    font-size: 38px;
+    text-align: center;
+}
+
+h2{
+    font-size: 32px;
+    text-align: center;
+}
+
+h3{
+    font-size: 26px;
+}
+
+p{
+    margin-top: 1rem;
+}
+
+img{
+    width: 100%;
+}
+
+.btn{
+    border-radius: 7px;
+    font-size: 18px;
+    color: #f8f8f5;
+    background-color: #A09BE7;
+    border: none;
+    padding: 10px 20px;
+}
+
+
+.navigation_wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navigation_wrap img{
+    height: 50px;
+    width: auto;
+}
+
+
+footer {
+    border-radius: 20px 20px 0px 0px;
+    background-color: rgb(24, 24, 24);
+    color: #f8f8f5;
+    padding: 30px 0px;
+}
+
+.footer-text p{
+    font-size: 14px;
+}
+
+.conditions{
+    padding: 10px;
+    background-color: #F2E94B;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
+.promo_base{
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #f8f8f5;
+}
+
+.promo_base img{
+    border-radius: 10px;
+    width: 100%;
+}
+
+.promo_base-text{
+    position: absolute;
+    padding: 50px;
+    z-index: 1;
+}
+
+.promo_base-text h1{
+    text-align: left;
+    font-size: 48px;
+}
+
+.promo_base-text p{
+    font-size: 28px;
+}
+
+.promo_base-text a{
+    font-size: 32px;
+}
+
+.form{
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    padding: 16px 50px;
+    margin: 10px;
+}
+
+.form-control:focus{
+    box-shadow: 0 0 0 .25rem #a09be778;
+    border-color: #A09BE7;
+}
+
+.catalogue_item, .item-wrapper{
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 20px 30px;
+    height: 100%;
+    align-items: center;
+}
+
+.catalogue_item a{
+    font-size: 22px;
+}
+
+.item .g-4{
+    --bs-gutter-y: 0rem;
+}
+
+h2{
+    margin-bottom: 1.5rem;
+}
+
+.conditions h2{
+    margin: 10px;
+}
+
+
+.category-href{
+    margin-bottom: 16px;
+}
+
+#price{
+    cursor: default;
+}
+
+@media (max-width: 1200px){
+    .promo_base-text h1, h1{
+        font-size: 32px;
+    }
+
+    .promo_base-text p, p{
+        font-size: 16px;
+    }
+
+    h2{
+        font-size: 32px;
+    }
+    .promo_base-text a, a{
+        font-size: 18px;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    .category-href{
+        margin: 10px 0px;
+    }
+
+
+    .navigation_wrap img{
+        height: 40px;
+        width: auto;
+    }
+
+    .item img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-href{
+        margin: 0px 0px;
+    }
+
+    .category-href:first-child{
+        margin-top: 20px;
+    }
+
+    .category-href:last-child{
+        margin-bottom: 20px;
+    }
+    
+    button, a{
+        font-size: 12px;
+    }
+
+    .promo_base-text h1, h1{
+        font-size: 24px;
+    }
+
+    h2{
+        font-size: 22px;
+        margin-bottom: 0.5rem;
+    }
+
+    h3{
+        font-size: 20px;
+    }
+
+    .promo_base-text p, p{
+        font-size: 16px;
+    }
+
+    .navigation_wrap img{
+        height: 30px;
+        width: auto;
+    }
+
+    section{
+        margin: 20px 0px;
+    }
+
+    .promo_base-text{
+        padding: 20px;
+    }
+
+    .footer-text{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    button, a{
+        font-size: 14px;
+    }
+
+    .promo_base-text h1{
+        font-size: 24px;
+    }
+
+    .promo_base-text p{
+        font-size: 16px;
+    }
+
+    .footer-text{
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,23 @@
+{% extends "base_layout.html" %}
+{% load static %}
+{% block title %}Login{% endblock title %}
+{% block content %}
+<div class = "container">
+    <section class = "login">
+        <h1>Авторизация</h1>
+        <div class ="row g-4 justify-content-center">
+            <div class = "col-lg-8">
+                <form class = "form" action ="{% url 'accounts:login' %}" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    {% if request.GET.next %}
+                        <input type = "hidden" name = "next" value="{{ request.GET.next }}">
+                    {% endif %}
+                    <button type = "submit" class = "btn">Войти</button>
+                    <a href="{% url 'accounts:signup' %}" class = "btn">Signup</a>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}
