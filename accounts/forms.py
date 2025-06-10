@@ -12,13 +12,6 @@ class LoginForm(AuthenticationForm):
         widget=forms.PasswordInput(attrs={"autocomplete": "current-password", "class": "form-control mb-3"}),
     )
 
-class UserChangeForm(UserChangeForm):
-    def clean_username(self):
-        username = self.cleaned_data.get('Логин')
-        if self.instance and self.instance.pk and self.instance.username == username:
-            return username
-        return super().clean_username()
-
 class SignUpForm(UserCreationForm):
     username = UsernameField(label="Логин", widget=forms.TextInput(attrs={"autofocus": True, "class": "form-control mb-3"}))
     email = forms.EmailField(
